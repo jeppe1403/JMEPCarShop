@@ -1,0 +1,26 @@
+﻿@model IEnumerable<JMEPShop.Models.Car>
+
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<h2>Cars</h2>
+<div class="row">
+    @foreach (var c in Model)
+    {
+        <div class="col-md-4">
+            <h4>
+                <span id="carname" style="color:darkred">@c.Name</span>
+            </h4>
+            <p>
+                <img src="/Images/@c.Url" style="overflow: hidden; position:relative; width:200px; height:200px;" />
+            </p>
+            <a id="btn_add" href="@Url.Action("ProductDetails", "Cars", new { id = c.ID })" class="btn btn-info btn-lg">View more</a>
+        </div>
+    }
+</div>
+

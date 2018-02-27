@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "JMEP Shop";
+}
+
+<h2>JMEP Shop</h2>
+
+<p>Hello Welcome to JMEP Shop</p>
+<div>
+    <a id="btn_add" href="@Url.Action("ProductList", "Cars")" class="btn btn-info btn-lg" style="margin-left:60px">
+        <span class="glyphicon glyphicon-shopping-cart"></span> Webshop
+    </a>
+    <a id="btn_add" href="@Url.Action("Index", "Cars")" class="btn btn-info btn-lg" style="margin-left:60px">
+        <span class="glyphicon glyphicon-eye-open"> </span> Product Management
+    </a>
+</div>
